@@ -193,6 +193,10 @@ header .dropdown .dropdown__item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);;
 }
 
+#menu_close {
+    display: none;
+}
+
 main {
     margin-top: 187px;
     padding: 208px 0 197px;

@@ -20,10 +20,16 @@ $('.slider').slick({
 document.querySelector('#menu').onclick = () => {
     document.querySelector('.dropdown').classList.toggle('dropdown_active');
     if (document.querySelector('.dropdown').classList.contains('dropdown_active')) {
-        document.querySelector('#menu').src = '../images/ic__close.png';
+        document.querySelector('#menu').style.display = 'none';
+        document.querySelector('#menu_close').style.display = 'block';
         document.querySelector('main').insertAdjacentHTML("beforebegin", "<div class='overlay'></div>");
-    } else {
-        document.querySelector('#menu').src = '../images/ic__menu.png';
+    }
+}
+document.querySelector('#menu_close').onclick = () => {
+    document.querySelector('.dropdown').classList.toggle('dropdown_active');
+    if (!document.querySelector('.dropdown').classList.contains('dropdown_active')) {
+        document.querySelector('#menu_close').style.display = 'none';
+        document.querySelector('#menu').style.display = 'block';
         document.querySelector('.overlay').remove();
     }
 }
